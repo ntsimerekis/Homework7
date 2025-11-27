@@ -1,0 +1,123 @@
+@startuml
+
+object CharacterPropertiesFactory
+
+object "testDocument:Document" as doc
+
+object "ArialBlack14:CharacterProperties" as ab14 {
+    font = "Arial"
+    color = "Black"
+    size = 14
+}
+
+object "VerdanaBlack18:CharacterProperties" as vb18 {
+    font = "Verdana"
+    color = "Black"
+    size = 18
+}
+
+
+object "VerdanaRed12:CharacterProperties" as vr12 {
+    font = "Verdana"
+    color = "Red"
+    size = 12
+}
+
+object "CalibriBlue99:CharacterProperties" as cb99 {
+    font = "Calibri"
+    color = "Blue"
+    size = 99
+}
+
+object "0:Character" as char0 {
+    c = 'H'
+}
+
+object "1:Character" as char1 {
+    c = 'e'
+}
+
+object "2:Character" as char2 {
+    c = 'l'
+}
+object "3:Character" as char3 {
+    c = 'l'
+}
+object "4:Character" as char4 {
+    c = 'o'
+}
+object "5:Character" as char5 {
+    c = 'W'
+}
+object "6:Character" as char6 {
+    c = 'o'
+}
+object "7:Character" as char7 {
+    c = 'r'
+}
+object "8:Character" as char8 {
+    c = 'l'
+}
+object "9:Character" as char9 {
+    c = 'd'
+}
+object "10:Character" as char10 {
+    c = 'C'
+}
+object "11:Character" as char11 {
+    c = 'S'
+}
+object "12:Character" as char12 {
+    c = '5'
+}
+object "13:Character" as char13 {
+    c = '8'
+}
+object "14:Character" as char14 {
+    c = '0'
+}
+object "15:Character" as char15 {
+    c = '0'
+}
+
+doc *-- CharacterPropertiesFactory
+
+CharacterPropertiesFactory o-- ab14
+CharacterPropertiesFactory o-- vb18
+CharacterPropertiesFactory o-- vr12
+CharacterPropertiesFactory o-- cb99
+
+doc *-- char0
+doc *-- char1
+doc *-- char2
+doc *-- char3
+doc *-- char4
+doc *-- char5
+doc *-- char6
+doc *-- char7
+doc *-- char8
+doc *-- char9
+doc *-- char10
+doc *-- char11
+doc *-- char12
+doc *-- char13
+doc *-- char14
+doc *-- char15
+
+char0 o-- cb99
+char1 o-- ab14
+char2 o-- ab14
+char3 o-- ab14
+char4 o-- ab14
+char5 o-- cb99
+char6 o-- ab14
+char7 o-- ab14
+char8 o-- ab14
+char9 o-- ab14
+char10 o-- vb18
+char11 o-- vb18
+char12 o-- vr12
+char13 o-- vr12
+char14 o-- vr12
+char15 o-- vr12
+@enduml
